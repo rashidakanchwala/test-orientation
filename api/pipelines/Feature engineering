@@ -5,16 +5,16 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Reporting stage",
+        "Data ingestion",
         "Pre-modelling",
         "__default__",
-        "Feature engineering",
-        "Data ingestion"
+        "Reporting stage",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
-        "ingestion",
         "feature_engineering",
+        "ingestion",
         "reporting"
       ],
       "layer": "primary",
@@ -31,8 +31,8 @@
       "tags": [],
       "pipelines": [
         "Data ingestion",
-        "Pre-modelling",
         "__default__",
+        "Pre-modelling",
         "Feature engineering"
       ],
       "type": "data",
@@ -240,8 +240,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Modelling stage",
         "__default__",
+        "Modelling stage",
         "Feature engineering"
       ],
       "type": "data",
@@ -272,28 +272,12 @@
   ],
   "edges": [
     {
-      "source": "9f266f06",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "f063cc82",
-      "target": "7932e672"
-    },
-    {
-      "source": "8e4f1015",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "f063cc82",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "9f266f06",
+      "source": "abed6a4d",
       "target": "04ba733a"
     },
     {
-      "source": "7932e672",
-      "target": "1e3cc50a"
+      "source": "9f266f06",
+      "target": "e50f81b8"
     },
     {
       "source": "feature_engineering",
@@ -302,50 +286,66 @@
     {
       "source": "a3627e31",
       "target": "feature_engineering"
-    },
-    {
-      "source": "e50f81b8",
-      "target": "8e4f1015"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "f063cc82",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "04ba733a",
-      "target": "7c92a703"
-    },
-    {
-      "source": "9f266f06",
-      "target": "e50f81b8"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "04ba733a"
-    },
-    {
-      "source": "feature_engineering",
-      "target": "23c94afb"
     },
     {
       "source": "6ea2ec2c",
       "target": "23c94afb"
     },
     {
+      "source": "9f266f06",
+      "target": "04ba733a"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "23c94afb"
+    },
+    {
+      "source": "8e4f1015",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "9f266f06",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "f063cc82",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "7932e672",
+      "target": "1e3cc50a"
+    },
+    {
       "source": "f063cc82",
       "target": "04ba733a"
     },
     {
+      "source": "f063cc82",
+      "target": "7932e672"
+    },
+    {
+      "source": "e50f81b8",
+      "target": "8e4f1015"
+    },
+    {
+      "source": "7c92a703",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "f063cc82",
+      "target": "feature_engineering"
+    },
+    {
       "source": "a3627e31",
       "target": "e50f81b8"
+    },
+    {
+      "source": "04ba733a",
+      "target": "7c92a703"
     }
   ],
   "layers": [
@@ -408,20 +408,12 @@
       "outputs": [],
       "children": [
         {
-          "id": "feature_engineering",
-          "type": "modularPipeline"
-        },
-        {
-          "id": "9f266f06",
-          "type": "data"
-        },
-        {
-          "id": "a3627e31",
-          "type": "parameters"
-        },
-        {
           "id": "23c94afb",
           "type": "data"
+        },
+        {
+          "id": "abed6a4d",
+          "type": "parameters"
         },
         {
           "id": "1e3cc50a",
@@ -432,8 +424,16 @@
           "type": "data"
         },
         {
-          "id": "abed6a4d",
+          "id": "feature_engineering",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "a3627e31",
           "type": "parameters"
+        },
+        {
+          "id": "9f266f06",
+          "type": "data"
         }
       ]
     },
@@ -443,8 +443,8 @@
       "inputs": [
         "9f266f06",
         "abed6a4d",
-        "a3627e31",
-        "f063cc82"
+        "f063cc82",
+        "a3627e31"
       ],
       "outputs": [
         "23c94afb",
@@ -452,24 +452,24 @@
       ],
       "children": [
         {
-          "id": "6ea2ec2c",
+          "id": "8e4f1015",
+          "type": "data"
+        },
+        {
+          "id": "7932e672",
           "type": "task"
         },
         {
-          "id": "7c92a703",
-          "type": "data"
-        },
-        {
-          "id": "8e4f1015",
-          "type": "data"
+          "id": "6ea2ec2c",
+          "type": "task"
         },
         {
           "id": "04ba733a",
           "type": "task"
         },
         {
-          "id": "7932e672",
-          "type": "task"
+          "id": "7c92a703",
+          "type": "data"
         },
         {
           "id": "e50f81b8",
